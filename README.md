@@ -119,7 +119,7 @@
 
     - Windows10/11
 
-        - [Windows用ダウンローダー](https://github.com/kytk/abis-web-202201/raw/main/util/l4n_win.zip)をダウンロードします
+        - [Windows用ダウンローダー](https://github.com/kytk/abis-web-202201/raw/master/util/l4n_win.zip)をダウンロードします
 
         - l4n_win.zip を展開します
 
@@ -141,7 +141,7 @@
  
     - macOS
 
-        - [macOS用ダウンローダー](https://github.com/kytk/abis-web-202201/raw/main/util/l4n_mac.zip)をダウンロードします
+        - [macOS用ダウンローダー](https://github.com/kytk/abis-web-202201/raw/master/util/l4n_mac.zip)をダウンロードします
 
         - l4n_mac.zip を展開します
 
