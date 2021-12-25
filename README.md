@@ -122,7 +122,7 @@
 
 - 分散ダウンロード(推奨): Lin4Neuroは16GBありますので、分散ダウンロードできるプログラムを準備してあります。自身の環境にあわせて以下の対処を行ってください。Lin4Neuroを16のファイルに分割してダウンロードします。ネットワークの環境にもよりますが、1ファイルあたり5-10分程度かかりますので、ダウンロード終了に約1-2時間かかるとお考えください
 
-    - Windows10
+    - Windows10/11
 
         - [Windows用ダウンローダー](https://github.com/kytk/abis-web-202201/raw/main/util/l4n_win.zip)をダウンロードします
 
@@ -447,7 +447,7 @@
 - 【質問】macOSにVirtualBoxをインストールし、Lin4Neuroをインポートし、実行しようとしたところ、以下のエラーメッセージが出て起動しません。
 
 ```
-he virtual machine 'L4N-2004-abis' has terminated unexpectedly during startup with exit code 1 (0x1).
+The virtual machine 'L4N-2004-abis' has terminated unexpectedly during startup with exit code 1 (0x1).
 
 終了コード : NS_ERROR_FAILURE (0x80004005)
 コンポーネント: MachineWrap
@@ -458,15 +458,16 @@ Kernel driver not installed (rc=-1908)
 Make sure the kernel module has been loaded successfully.
 
 where: suplibOsInit what: 3 VERR_VM_DRIVER_NOT_INSTALLED (-1908) - The support driver is not installed. On linux, open returned ENOENT. 
+
 ```
 
-    - 【回答】これは、比較的有名な症状です。rc=-1908 問題と私は勝手に読んでいます。以下を実行してください。https://www.nemotos.net/?p=3707 も参考にしてください。
-        - 一度、VirtualBoxをアンインストールしてください。
-        - macOSを再起動してください。
-        - VirtualBoxをインストールする際に、ダイアログがでる度に、システム環境設定 -> セキュリティを確認してください。
-        - "Oracle" のキーワードを見ながら、都度許可を出してください。
-        - これでインストールできる可能性が高いです。
-        - なお、SIPを無効にする方法は最近はうまくいかないです…
+- 【回答】これは、比較的有名な症状です。rc=-1908 問題と私は勝手に読んでいます。以下を実行してください。https://www.nemotos.net/?p=3707 も参考にしてください。
+    - 一度、VirtualBoxをアンインストールしてください。
+    - macOSを再起動してください。
+    - VirtualBoxをインストールする際に、ダイアログがでる度に、システム環境設定 -> セキュリティを確認してください。
+    - "Oracle" のキーワードを見ながら、都度許可を出してください。
+    - これでインストールできる可能性が高いです。
+    - なお、SIPを無効にする方法は最近はうまくいかないです…
 
 
 - 【質問】「D. 仮想マシンの設定 (所要時間約5分)」の作業中、VirtualBoxのメイン画面から設定タブを押すと設定画面の下部に「無効な設定が見つかりました。」と表示され、共有フォルダなどの設定が出来ませんでした。設定をしない状態で起動を押しても、「仮想マシン"L4N-2004-abis"のセッションを開けませんでした。」という警告が出てしまいます。
