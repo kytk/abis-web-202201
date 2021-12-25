@@ -7,32 +7,48 @@
 - CPUは Intel でも Apple M1 でも問いません
 - ターミナルはデフォルトの zsh を使用することとします
 
-## git
+## インストールが必要なソフトウェア
+- git
+- octave
+- python3
+- Jupyter Notebook (bashとoctaveカーネル含む)
+- Mango
+- MRIcroGL
+- XQuartz
+- FSL
+- MRtrix3
+- 3D Slicer (SlicerDMRI含む)
+- Matlab
+- SPM
+- CONN
 
-### インストール
+
+### git
+
+#### インストール
 - Command line tools for Xcode のインストールにより git を使うことが可能となります
 
 ```
 xcode-select --install
 ```
 
-### 確認
+#### 確認
 - ターミナルから以下をタイプしていただき、バージョンが出力されれば大丈夫です
 
 ```
 git --version
 ```
 
-## Octave
+### Octave
 
-### インストール
+#### インストール
 - Homebrew 経由でインストールするのが簡単です。Homebrewのインストールは各自調べてください
 
 ```
 brew install octave
 ```
 
-### 確認
+#### 確認
 - ターミナルから以下をタイプします
 
 ```
@@ -41,23 +57,23 @@ octave --version
 
 - GNU Octave, version 6.4.0 と表示されればOKです 
 
-## Python
+### Python3
 
-### インストール
+#### インストール
 - https://www.python.org/ から Python 3.10.1 をダウンロードしてインストールすることにより、Apple M1でも Python が利用可能となります。
 
 - https://www.python.org/ftp/python/3.10.1/python-3.10.1-macos11.pkg
 
-### 確認
+#### 確認
 - ターミナルを起動し、以下をタイプしてください。Python 3.10.1 になっていれば大丈夫です
 
 ```
 python3 --version
 ```
 
-## Jupyter Notebook および bash と octave のカーネル
+### Jupyter Notebook および bash と octave のカーネル
 
-### インストール
+#### インストール
 - Pythonをインストールした後、以下を実行してください
 
 ```
@@ -67,7 +83,7 @@ python3 -m bash_kernel.install
 pip3 install octave_kernel
 ```
 
-### 確認
+#### 確認
 - ターミナルから以下をタイプしてください
 
 ```
@@ -76,18 +92,18 @@ jupyter-notebook
 
 - WebブラウザにJupyterという画面が出ればOKです。そのページを消した後、Jupyter Notebookを起動したターミナルで、control + c を押すとJupyter Notebookのサーバーをシャットダウンできますので y を押してシャットダウンしてください
 
-## Mango
+### Mango
 
-### インストール
+#### インストール
 - Mango は以下のリンクからインストーラーを入手できます
 - http://ric.uthscsa.edu/mango/downloads/mango_mac.zip
 
-### 確認
+#### 確認
 - アプリケーションから Mango を起動し、License Agreementが出た後に Mango のメインメニューが出ればOKです
 
-## MRIcroGL
+### MRIcroGL
 
-### インストール
+#### インストール
 - MRIcroGL は以下のリンクからインストーラーを入手できます
 - https://github.com/rordenlab/MRIcroGL/releases/download/v1.2.20211006/MRIcroGL_macOS_which2.dmg
 - インストール後、以下のコマンドを実行し、.zprofileに設定を書き込みます。bashの方は.bash_profileに置き換えてください
@@ -98,7 +114,7 @@ echo '#MRIcroGL' >> ~/.zprofile
 echo 'PATH=$PATH:/Applications/MRIcroGL.app/Contents/Resources' >> ~/.zprofile
 ```
 
-### 確認
+#### 確認
 - 一度ターミナルを終了し、ターミナルを再度起動した後に、以下をタイプしてください
 
 ```
@@ -107,18 +123,18 @@ dcm2niix --version
 
 この結果が、v1.0.20211006 と表示されれば大丈夫です
 
-## XQuartz
+### XQuartz
 - XQuartz は FSL の実行のために必要です
 
-### インストール
+#### インストール
 - 以下からインストーラーを入手し、実行します
 - https://github.com/XQuartz/XQuartz/releases/download/XQuartz-2.8.1/XQuartz-2.8.1.dmg
 
-### 確認
+#### 確認
 - FSLが実行されればXQuartzもきちんとインストールされるのでここでは確認しません
 
-## FSL
-### インストール
+### FSL
+#### インストール
 - 以下をターミナルから実行し、fslinstaller.pyを入手し、実行します
 
 ```
@@ -144,7 +160,7 @@ echo '. ${FSLDIR}/etc/fslconf/fsl.sh' >> ~/.zprofile
 
 - これが終わったら一度ターミナルを終了し、再びターミナルを起動します
 
-### 確認
+#### 確認
 - ターミナルから以下をタイプします
 ```
 fsl
@@ -152,15 +168,15 @@ fsl
 
 これでFSLが立ち上がればOKです
 
-## MRtrix
-### インストール
+### MRtrix3
+#### インストール
 - ターミナルから以下を実行します
 
 ```
 sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/MRtrix3/macos-installer/master/install)"
 ```
 
-### 確認
+#### 確認
 - ターミナルから以下を実行します
 
 ```
@@ -169,8 +185,10 @@ mrview
 
 - MRViewが起動すれば大丈夫です
 
-## 3D Slicer
+### 3D Slicer
 - **注意** SlicerはApple M1で完全には動作確認がとれていません。もしかしたら使えない可能性もあります
+
+#### インストール
 - 以下のリンクからインストーラーをダウンロードし、実行します
 - https://download.slicer.org/bitstream/60add6fdae4540bf6a89bf73
 - インストール後、3D Slicerを起動します
@@ -186,15 +204,15 @@ mrview
 
     ![UKFTractography](img/slicer3.png)
 
-### 確認
+#### 確認
 - Slicer が起動した後、"Welcome to Slicer" -> "Diffusion" を選択した後、"Import and Export" といったメニューが出れば大丈夫です
 
-## Matlab
-- Matlabは各自購入してください。以下のリンクが参考になります
+### Matlab
+- Matlabは各自購入してください。Baseだけで大丈夫です。必要なバージョンは以下のリンクが参考になります
 - https://jp.mathworks.com/support/requirements/previous-releases.html
 
-## SPM
-### インストール
+### SPM
+#### インストール
 - GitHub経由が便利です
 - ホームディレクトリの下に git というディレクトリを作成し、その下に spm12 をインストールすることとします
 
@@ -213,7 +231,7 @@ sudo find ~/git/spm12 -name '*.mexmaci64' -exec spctl --add {} \;
 
 - この後、Matlabのパス設定で、~/git/spm12 を指定してください
 
-### 確認
+#### 確認
 - Matlab から
 
 ```
@@ -222,13 +240,13 @@ spm
 
 とタイプし、SPMが起動すればOKです
 
-## CONN
-### インストール
+### CONN
+#### インストール
 - CONNは 20.b を使用します
 - インストール方法は以下のリンクを参照してください
 - https://www.nemotos.net/?p=3873
 
-### 確認
+#### 確認
 - Matlabから
 
 ```
@@ -236,8 +254,4 @@ conn
 ```
 
 とタイプし、CONNが起動すればOKです
-
-
-
-
 
