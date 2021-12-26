@@ -171,7 +171,7 @@
 
 - 一括ダウンロード: 十分にネットワークが安定している方は、以下からダウンロードしてください。その際、リンクを右クリックして、「名前をつけて保存」から保存してください。16GBありますのでダウンロードには約1時間かかります。ネットワークが細い方は、上の分割ダウンロードを選択してください
 
-    - [L4N-2004-abis-20211110.ovaのダウンロード](http://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N/L4N-2004-abis-20211110.ova){:target="_blank"}
+    - [L4N-2004-abis-20211110.ovaのダウンロード](https://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/L4N/L4N-2004-abis-20211110.ova){:target="_blank"}
 
     - L4N-2004-abis-20211110.ovaのmd5値は、`1a43b114f264458230f2265dba11e492` になります。ファイルサイズの検証にお使いください
 
