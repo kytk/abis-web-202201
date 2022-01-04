@@ -162,7 +162,6 @@ dcm2niix --version
 ```
 cd ~/Downloads
 curl -O https://fsl.fmrib.ox.ac.uk/fsldownloads/fslinstaller.py
-python2 
 cd ~/Downloads
 python2 ./fslinstaller.py 
 ```
