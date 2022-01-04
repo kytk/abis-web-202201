@@ -9,7 +9,8 @@
 
 ## インストールが必要なソフトウェア
 - git
-- octave
+- Octave
+- DCMTK
 - python3
 - Jupyter Notebook (bashとoctaveカーネル含む)
 - Mango
@@ -17,6 +18,7 @@
 - XQuartz
 - FSL
 - MRtrix3
+- ANTs
 - 3D Slicer (SlicerDMRI含む)
 - Matlab
 - SPM
@@ -56,6 +58,26 @@ octave --version
 ```
 
 - GNU Octave, version 6.4.0 と表示されればOKです 
+
+
+### DCMTK
+
+#### インストール
+- Octave と同様、Homebrewを使います
+
+```
+brew install dcmtk
+```
+
+#### 確認
+- ターミナルから以下をタイプします
+
+```
+dcmdump --version
+```
+
+- $dcmtk: dcmdump v3.6.6 2021-01-14 と表示されればOKです
+
 
 ### Python3
 
@@ -184,6 +206,27 @@ mrview
 ```
 
 - MRViewが起動すれば大丈夫です
+
+### ANTs
+#### インストール
+- ターミナルから以下を実行します
+
+```
+cd ~/Downloads
+curl https://raw.githubusercontent.com/kytk/shell-scripts/master/ANTs_installer_macOS.sh
+chmod 755 ANTs_installer_macOS.sh
+./ANTs_installer_macOS.sh
+```
+#### 確認
+- "ANTs is installed" "Please close and re-run the terminal to reflect PATH setting" と出たら、ターミナルを一度閉じて、再度ターミナルを開きます
+
+- ターミナルから以下を実行します
+
+```
+ANTS
+```
+
+- "call ANTS or ANTS --help" と出れば大丈夫です
 
 ### 3D Slicer
 - **注意** SlicerはApple M1で完全には動作確認がとれていません。もしかしたら使えない可能性もあります
