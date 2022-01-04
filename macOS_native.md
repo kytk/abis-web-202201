@@ -213,7 +213,7 @@ mrview
 
 ```
 cd ~/Downloads
-curl https://raw.githubusercontent.com/kytk/shell-scripts/master/ANTs_installer_macOS.sh
+curl -O https://raw.githubusercontent.com/kytk/shell-scripts/master/ANTs_installer_macOS.sh
 chmod 755 ANTs_installer_macOS.sh
 ./ANTs_installer_macOS.sh
 ```
