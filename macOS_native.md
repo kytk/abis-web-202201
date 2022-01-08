@@ -63,7 +63,8 @@ octave --version
 ### DCMTK
 
 #### インストール
-- Octave と同様、Homebrewを使います
+- Intel macOS は、Octave と同様、Homebrewを使います
+- (Apple M1は少しお待ちください)
 
 ```
 brew install dcmtk
@@ -99,6 +100,7 @@ python3 --version
 - Pythonをインストールした後、以下を実行してください
 
 ```
+pip3 install -U pip
 pip3 install jupyter notebook
 pip3 install bash_kernel
 python3 -m bash_kernel.install
