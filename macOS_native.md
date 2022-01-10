@@ -84,7 +84,7 @@ dcmdump --version
 
 #### インストール
 - Apple M1ではHomebrewはまだ対応していないため、本家ウェブサイトからダウンロードします
-- [DCMTKのウェブサイト](https://dicom.offis.de/download/dcmtk/dcmtk366/bin/dcmtk-3.6.6-macosx-x86_64-static.tar.bz2) から dcmtk-3.6.6-macosx-x86_64-static.tar.bz2 をダウンロードします
+- [DCMTKのウェブサイト](https://dicom.offis.de/download/dcmtk/dcmtk366/bin/dcmtk-3.6.6-macosx-x86_64-static.tar.bz2) から dcmtk-3.6.6-macosx-x86_64-static.tar.bz2 をダウンロードします(左のリンクをクリックすればそのままダウンロードされます)
 - 以下で展開し、　dcmtkとフォルダ名を変更し、　/Applicationsにコピーします
 
 ```
