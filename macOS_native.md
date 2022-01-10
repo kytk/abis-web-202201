@@ -15,6 +15,7 @@
 - Jupyter Notebook (bashとoctaveカーネル含む)
 - Mango
 - MRIcroGL
+- tree
 - XQuartz
 - FSL
 - MRtrix3
@@ -189,6 +190,25 @@ dcm2niix --version
 ```
 
 この結果が、v1.0.20211006 と表示されれば大丈夫です
+
+### tree
+- treeはディレクトリの構成をターミナルから確認できる便利なコマンドです
+
+#### インストール
+- Homebrewから簡単にインストールできます
+
+```
+brew install tree
+```
+
+#### 確認
+- ターミナルから以下で確認できます
+
+```
+tree -L 1
+```
+- ご自身のディレクトリ構成が表示されると思います
+
 
 ### XQuartz
 - XQuartz は FSL の実行のために必要です
