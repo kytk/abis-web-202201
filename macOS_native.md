@@ -60,11 +60,10 @@ octave --version
 - GNU Octave, version 6.4.0 と表示されればOKです 
 
 
-### DCMTK
+### DCMTK (Intel)
 
 #### インストール
 - Intel macOS は、Octave と同様、Homebrewを使います
-- (Apple M1は少しお待ちください)
 
 ```
 brew install dcmtk
@@ -78,6 +77,50 @@ dcmdump --version
 ```
 
 - $dcmtk: dcmdump v3.6.6 2021-01-14 と表示されればOKです
+
+
+### DCMTK (Apple M1)
+
+#### インストール
+- Apple M1ではHomebrewはまだ対応していないため、本家ウェブサイトからダウンロードします
+- [DCMTKのウェブサイト](https://dicom.offis.de/download/dcmtk/dcmtk366/bin/dcmtk-3.6.6-macosx-x86_64-static.tar.bz2) から dcmtk-3.6.6-macosx-x86_64-static.tar.bz2 をダウンロードします
+- 以下で展開し、　dcmtkとフォルダ名を変更し、　/Applicationsにコピーします
+
+```
+cd ~/Downloads
+tar xvf dcmtk-3.6.6-macosx-x86_64-static.tar.bz2
+mv dcmtk-3.6.6-macosx-x86_64-static dcmtk
+cp -r dcmtk /Applications
+```
+
+- パスを通します
+
+```
+echo '' >> ~/.zprofile
+echo '#DCMTK' >> ~/.zprofile
+echo 'PATH=$PATH:/Applications/dcmtk/bin' >> ~/.zprofile
+```
+
+- ターミナルを一度閉じ、再起動します
+
+#### 確認
+- ターミナルから以下をタイプします
+
+```
+dcmdump --version
+```
+
+- "dcmdump"は、開発元を検証できないためひらけません。といったセキュリティ関連のダイアログが出ます(スクリーンショットを撮り忘れました)ので、一度、キャンセルし、システム環境設定 -> セキュリティとプライバシー -> 一般 と進み、dcmdump について、"dcmdump"は開発元を確認できないため、使用がブロックされました。のところで「このまま許可」をクリックします。
+- 再度、以下をタイプします。
+
+```
+dcmdump --version
+```
+
+- おそらく、もう一度確認のダイアログが出るので、そのまま「開く」をクリックします。
+
+- その結果、$dcmtk: dcmdump v3.6.6 2021-01-14 と表示されればOKです
+- 以降はセキュリティのダイアログは出ません。
 
 
 ### Python3
