@@ -4,6 +4,8 @@
 
 ## 新着情報 
 
+- 2022.01.10 プロキシ設定について追記しました
+- 2022.01.10 macOS native用のインストラクションをアップデートしました。Apple M1用のDCMTKのインストール方法と、treeのインストール方法を追加しました
 - 2022.01.04 macOS native用のインストラクションをアップデートしました。DCMTKとANTsのインストラクションを追加しています
 - 2021.12.26 データの入手について追記しました
 - 2021.12.11 チュートリアル用ウェブサイトを立ち上げました
@@ -358,6 +360,18 @@
     git config --global --unset http.proxy
     git config --global --unset https.proxy
     ```
+
+- さらにダウンローダー curl 用に以下の設定も必要になります。ユーザ名, パスワード, プロキシ名, ポート番号はご自身の設定にあわせてください
+
+    ```
+    echo '' >> ~/.bash_aliases
+    echo 'export http_proxy=http:ユーザ名:パスワード@プロキシ名:ポート番号' >> ~/.bash_aliases
+    echo 'export https_proxy=http:ユーザ名:パスワード@プロキシ名:ポート番号' >> ~/.bash_aliases
+    echo '--insecure' >> ~/.curlrc
+    ```
+
+この後、ターミナルを一度終了し、再度立ち上げたうえで、次のステップに進んでください
+
 
 ### G. データの入手 (所要時間約1時間)
 
